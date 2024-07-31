@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Atkinson Hyperlegible', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+#root {
+  min-width: 375px;
+  background-color: theme('colors.white');
+}
+
+.triangle {
+  --color: theme('colors.neutral.300');
+  background-image: linear-gradient(
+      to bottom right,
+      transparent 50%,
+      var(--color) 0
+    ),
+    linear-gradient(to top right, var(--color) 50%, transparent 0);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  background-position: left, right;
+}
+
+.triangle.active {
+  --color: theme('colors.primary.400');
+}
+
+.timer {
+  font-variant-numeric: tabular-nums;
+}
